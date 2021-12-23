@@ -7,8 +7,7 @@ def common_pods
   #pod 'TangemSdk', :path => '../tangem-sdk-ios'
 end
 
-
-target 'BlockchainSdk' do
+def sdk_pods
   pod 'BigInt'
   pod 'SwiftyJSON'
   pod 'Alamofire'
@@ -25,11 +24,22 @@ target 'BlockchainSdk' do
   pod 'stellar-ios-mac-sdk'
   pod 'BitcoinCore.swift', :git => 'https://github.com/lazutkin-andrey/bitcoincore.git', :tag => '0.0.15'
 #  pod 'BitcoinCore.swift', :path => '../bitcoincore'
+end
 
+workspace 'BlockchainSdk.xcworkspace'
+
+target 'BlockchainSdk' do
+  sdk_pods
   common_pods
 end
 
 target 'BlockchainSdkTests' do
+  common_pods
+end
+
+target 'BlockchainSdkExample' do
+  project 'BlockchainSdkExample/BlockchainSdkExample.xcodeproj'
+  sdk_pods
   common_pods
 end
 

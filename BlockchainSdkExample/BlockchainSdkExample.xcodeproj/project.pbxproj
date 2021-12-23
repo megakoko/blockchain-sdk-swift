@@ -7,18 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99F33214A7BD397B93B60009 /* Pods_BlockchainSdkExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6833A14C6729284DDBDD30F /* Pods_BlockchainSdkExample.framework */; };
 		DA2264132774B1C600B42E26 /* BlockchainSdkExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2264122774B1C600B42E26 /* BlockchainSdkExampleApp.swift */; };
 		DA2264152774B1C600B42E26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2264142774B1C600B42E26 /* ContentView.swift */; };
 		DA2264172774B1C800B42E26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2264162774B1C800B42E26 /* Assets.xcassets */; };
 		DA22641A2774B1C800B42E26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2264192774B1C800B42E26 /* Preview Assets.xcassets */; };
+		DA22642E2774B62E00B42E26 /* BlockchainSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA22642D2774B62E00B42E26 /* BlockchainSdk.framework */; };
+		DA22642F2774B62E00B42E26 /* BlockchainSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA22642D2774B62E00B42E26 /* BlockchainSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DA2264302774B62E00B42E26 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DA22642F2774B62E00B42E26 /* BlockchainSdk.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		38F139952510721548DB2C10 /* Pods-BlockchainSdkExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockchainSdkExample.release.xcconfig"; path = "Target Support Files/Pods-BlockchainSdkExample/Pods-BlockchainSdkExample.release.xcconfig"; sourceTree = "<group>"; };
+		A1D98EFCDF2E80799847F274 /* Pods-BlockchainSdkExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockchainSdkExample.debug.xcconfig"; path = "Target Support Files/Pods-BlockchainSdkExample/Pods-BlockchainSdkExample.debug.xcconfig"; sourceTree = "<group>"; };
+		D6833A14C6729284DDBDD30F /* Pods_BlockchainSdkExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlockchainSdkExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA22640F2774B1C600B42E26 /* BlockchainSdkExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockchainSdkExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA2264122774B1C600B42E26 /* BlockchainSdkExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainSdkExampleApp.swift; sourceTree = "<group>"; };
 		DA2264142774B1C600B42E26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DA2264162774B1C800B42E26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA2264192774B1C800B42E26 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DA22642D2774B62E00B42E26 /* BlockchainSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BlockchainSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +47,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99F33214A7BD397B93B60009 /* Pods_BlockchainSdkExample.framework in Frameworks */,
+				DA22642E2774B62E00B42E26 /* BlockchainSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09DED86EA4D7FF11B08348E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A1D98EFCDF2E80799847F274 /* Pods-BlockchainSdkExample.debug.xcconfig */,
+				38F139952510721548DB2C10 /* Pods-BlockchainSdkExample.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 		DA2264062774B1C600B42E26 = {
 			isa = PBXGroup;
 			children = (
 				DA2264112774B1C600B42E26 /* BlockchainSdkExample */,
 				DA2264102774B1C600B42E26 /* Products */,
+				09DED86EA4D7FF11B08348E6 /* Pods */,
+				DEB6D048D01DA47C6EAE86D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +102,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		DEB6D048D01DA47C6EAE86D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA22642D2774B62E00B42E26 /* BlockchainSdk.framework */,
+				D6833A14C6729284DDBDD30F /* Pods_BlockchainSdkExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA22641D2774B1C800B42E26 /* Build configuration list for PBXNativeTarget "BlockchainSdkExample" */;
 			buildPhases = (
+				9910D8B3980F36EFA49E2CD8 /* [CP] Check Pods Manifest.lock */,
 				DA22640B2774B1C600B42E26 /* Sources */,
 				DA22640C2774B1C600B42E26 /* Frameworks */,
 				DA22640D2774B1C600B42E26 /* Resources */,
+				08B4FC0F14A4C7ED77A99DF3 /* [CP] Embed Pods Frameworks */,
+				DA2264302774B62E00B42E26 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +178,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08B4FC0F14A4C7ED77A99DF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlockchainSdkExample/Pods-BlockchainSdkExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlockchainSdkExample/Pods-BlockchainSdkExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlockchainSdkExample/Pods-BlockchainSdkExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9910D8B3980F36EFA49E2CD8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlockchainSdkExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA22640B2774B1C600B42E26 /* Sources */ = {
@@ -263,6 +352,7 @@
 		};
 		DA22641E2774B1C800B42E26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1D98EFCDF2E80799847F274 /* Pods-BlockchainSdkExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,6 +382,7 @@
 		};
 		DA22641F2774B1C800B42E26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38F139952510721548DB2C10 /* Pods-BlockchainSdkExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
