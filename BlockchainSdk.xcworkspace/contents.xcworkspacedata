@@ -5,6 +5,9 @@
       location = "group:BlockchainSdk.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:BlockchainSdkExample/BlockchainSdkExample.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
