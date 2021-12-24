@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct BlockchainSdkExampleView: View {
+    @StateObject var model = BlockchainSdkExampleViewModel()
     
     var body: some View {
         Text("Hello, world!")
