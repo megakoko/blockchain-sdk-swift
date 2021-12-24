@@ -11,7 +11,7 @@ import SwiftUI
 struct BlockchainSdkExampleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BlockchainSdkExampleView()
         }
     }
 }

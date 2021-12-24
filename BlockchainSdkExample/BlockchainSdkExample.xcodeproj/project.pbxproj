@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		99F33214A7BD397B93B60009 /* Pods_BlockchainSdkExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6833A14C6729284DDBDD30F /* Pods_BlockchainSdkExample.framework */; };
 		DA2264132774B1C600B42E26 /* BlockchainSdkExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2264122774B1C600B42E26 /* BlockchainSdkExampleApp.swift */; };
-		DA2264152774B1C600B42E26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2264142774B1C600B42E26 /* ContentView.swift */; };
+		DA2264152774B1C600B42E26 /* BlockchainSdkExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2264142774B1C600B42E26 /* BlockchainSdkExampleView.swift */; };
 		DA2264172774B1C800B42E26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2264162774B1C800B42E26 /* Assets.xcassets */; };
 		DA22641A2774B1C800B42E26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2264192774B1C800B42E26 /* Preview Assets.xcassets */; };
 		DA22642E2774B62E00B42E26 /* BlockchainSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA22642D2774B62E00B42E26 /* BlockchainSdk.framework */; };
@@ -36,7 +36,7 @@
 		D6833A14C6729284DDBDD30F /* Pods_BlockchainSdkExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlockchainSdkExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA22640F2774B1C600B42E26 /* BlockchainSdkExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockchainSdkExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA2264122774B1C600B42E26 /* BlockchainSdkExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainSdkExampleApp.swift; sourceTree = "<group>"; };
-		DA2264142774B1C600B42E26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DA2264142774B1C600B42E26 /* BlockchainSdkExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainSdkExampleView.swift; sourceTree = "<group>"; };
 		DA2264162774B1C800B42E26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA2264192774B1C800B42E26 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA22642D2774B62E00B42E26 /* BlockchainSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BlockchainSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,7 +91,7 @@
 				DA2264322774B6F700B42E26 /* Info.plist */,
 				DA2264312774B69D00B42E26 /* BlockchainSdkExample.entitlements */,
 				DA2264122774B1C600B42E26 /* BlockchainSdkExampleApp.swift */,
-				DA2264142774B1C600B42E26 /* ContentView.swift */,
+				DA2264142774B1C600B42E26 /* BlockchainSdkExampleView.swift */,
 				DA2264162774B1C800B42E26 /* Assets.xcassets */,
 				DA2264182774B1C800B42E26 /* Preview Content */,
 			);
@@ -230,7 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA2264152774B1C600B42E26 /* ContentView.swift in Sources */,
+				DA2264152774B1C600B42E26 /* BlockchainSdkExampleView.swift in Sources */,
 				DA2264132774B1C600B42E26 /* BlockchainSdkExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
