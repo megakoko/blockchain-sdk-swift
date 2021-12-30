@@ -11,8 +11,26 @@ struct BlockchainSdkExampleView: View {
     @StateObject var model = BlockchainSdkExampleViewModel()
     
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack(spacing: 20) {
+            Button {
+                model.test()
+            } label: {
+                Text("Test")
+            }
+            
+            Button {
+                model.scan()
+            } label: {
+                Text("Scan")
+            }
+            
+            
+            Button {
+                model.sign()
+            } label: {
+                Text("Sign")
+            }
+        }
     }
 }
 
