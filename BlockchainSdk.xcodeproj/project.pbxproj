@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -297,7 +297,6 @@
 		B0ED2012267C9E4500D5C3E5 /* BitcoinTransactionParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ED2010267C9E4500D5C3E5 /* BitcoinTransactionParams.swift */; };
 		B0F9DCA125FB4C9B00C0AF18 /* MultiNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9DCA025FB4C9B00C0AF18 /* MultiNetworkProvider.swift */; };
 		B0FF8817264AEA60003E000A /* LitecoinNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FF8816264AEA60003E000A /* LitecoinNetworkService.swift */; };
-		DAB6AB38277C701B00EE41C6 /* Solana in Frameworks */ = {isa = PBXBuildFile; productRef = DAB6AB37277C701B00EE41C6 /* Solana */; };
 		ED3D33D84D8B747FB3B1D09D /* Pods_BlockchainSdkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A172F9D47772F23948771418 /* Pods_BlockchainSdkTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -488,7 +487,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAB6AB38277C701B00EE41C6 /* Solana in Frameworks */,
 				88095B618D07D706BB871FE6 /* Pods_BlockchainSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1067,7 +1065,6 @@
 			);
 			name = BlockchainSdk;
 			packageProductDependencies = (
-				DAB6AB37277C701B00EE41C6 /* Solana */,
 			);
 			productName = BlockchainSdk;
 			productReference = 5D14E46E2397B80F00C15FC8 /* BlockchainSdk.framework */;
@@ -1125,7 +1122,6 @@
 			);
 			mainGroup = 5D14E4642397B80F00C15FC8;
 			packageReferences = (
-				DAB6AB36277C701B00EE41C6 /* XCRemoteSwiftPackageReference "Solana" */,
 			);
 			productRefGroup = 5D14E46F2397B80F00C15FC8 /* Products */;
 			projectDirPath = "";
@@ -1797,25 +1793,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		DAB6AB36277C701B00EE41C6 /* XCRemoteSwiftPackageReference "Solana" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ajamaica/Solana.Swift";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		DAB6AB37277C701B00EE41C6 /* Solana */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DAB6AB36277C701B00EE41C6 /* XCRemoteSwiftPackageReference "Solana" */;
-			productName = Solana;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5D14E4652397B80F00C15FC8 /* Project object */;
 }
