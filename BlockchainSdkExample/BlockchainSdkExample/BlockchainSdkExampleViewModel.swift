@@ -12,13 +12,15 @@ import Solana
 
 class BlockchainSdkExampleViewModel: ObservableObject {
     private var account_24MT_6tAG: Account? {
-         return Account(secretKey: data)
+        nil
     }
 
     private var account_EwTx_F1TY: Account? {
+        nil
     }
 
     private var account_9C6z_zYgM: Account? {
+        nil
     }
 
     private let accountStorage = InMemoryAccountStorage()
