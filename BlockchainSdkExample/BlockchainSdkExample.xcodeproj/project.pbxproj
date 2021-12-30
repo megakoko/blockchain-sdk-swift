@@ -14,6 +14,7 @@
 		DA22641A2774B1C800B42E26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2264192774B1C800B42E26 /* Preview Assets.xcassets */; };
 		DA22642E2774B62E00B42E26 /* BlockchainSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA22642D2774B62E00B42E26 /* BlockchainSdk.framework */; };
 		DA22642F2774B62E00B42E26 /* BlockchainSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA22642D2774B62E00B42E26 /* BlockchainSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DA243E5E277DD10200DEC08D /* Solana in Frameworks */ = {isa = PBXBuildFile; productRef = DA243E5D277DD10200DEC08D /* Solana */; };
 		DA47096B27758FBE00D7B230 /* BlockchainSdkExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47096A27758FBE00D7B230 /* BlockchainSdkExampleViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		DA22642D2774B62E00B42E26 /* BlockchainSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BlockchainSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA2264312774B69D00B42E26 /* BlockchainSdkExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BlockchainSdkExample.entitlements; sourceTree = "<group>"; };
 		DA2264322774B6F700B42E26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DA243E5C277DD0A500DEC08D /* Solana.Swift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Solana.Swift; path = ../../Solana.Swift; sourceTree = "<group>"; };
 		DA47096A27758FBE00D7B230 /* BlockchainSdkExampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainSdkExampleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,6 +55,7 @@
 			files = (
 				99F33214A7BD397B93B60009 /* Pods_BlockchainSdkExample.framework in Frameworks */,
 				DA22642E2774B62E00B42E26 /* BlockchainSdk.framework in Frameworks */,
+				DA243E5E277DD10200DEC08D /* Solana in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +75,7 @@
 		DA2264062774B1C600B42E26 = {
 			isa = PBXGroup;
 			children = (
+				DA243E5B277DD0A500DEC08D /* Packages */,
 				DA2264112774B1C600B42E26 /* BlockchainSdkExample */,
 				DA2264102774B1C600B42E26 /* Products */,
 				09DED86EA4D7FF11B08348E6 /* Pods */,
@@ -109,6 +113,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		DA243E5B277DD0A500DEC08D /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				DA243E5C277DD0A500DEC08D /* Solana.Swift */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		DEB6D048D01DA47C6EAE86D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +149,9 @@
 			dependencies = (
 			);
 			name = BlockchainSdkExample;
+			packageProductDependencies = (
+				DA243E5D277DD10200DEC08D /* Solana */,
+			);
 			productName = BlockchainSdkExample;
 			productReference = DA22640F2774B1C600B42E26 /* BlockchainSdkExample.app */;
 			productType = "com.apple.product-type.application";
@@ -448,6 +463,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA243E5D277DD10200DEC08D /* Solana */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Solana;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DA2264072774B1C600B42E26 /* Project object */;
 }
