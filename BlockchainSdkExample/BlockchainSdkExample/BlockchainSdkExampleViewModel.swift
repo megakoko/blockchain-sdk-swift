@@ -92,7 +92,7 @@ class BlockchainSdkExampleViewModel: ObservableObject {
         print("")
 
         print("Addresses:")
-        print([account_24MT_6tAG, account_EwTx_F1TY, account_9C6z_zYgM].map{ $0!.address })
+        print([account_24MT_6tAG, account_EwTx_F1TY, account_9C6z_zYgM].compactMap { $0?.address })
 
         let g = DispatchGroup()
 //
@@ -111,7 +111,13 @@ class BlockchainSdkExampleViewModel: ObservableObject {
 //        g.wait()
 
 
-        var accounts = [account_24MT_6tAG!, account_EwTx_F1TY!]
+        var accounts: [Account] = []
+        if let a = account_24MT_6tAG {
+            accounts.append(a)
+        }
+        if let a = account_EwTx_F1TY {
+            accounts.append(a)
+        }
         if reverse {
             accounts.reverse()
         }
@@ -140,8 +146,8 @@ class BlockchainSdkExampleViewModel: ObservableObject {
 //
 //        print("")
 
-        let source: Account = accounts[0]
-        let recipient: Account = accounts[1]
+//        let source: Account = accounts[0]
+//        let recipient: Account = accounts[1]
 
 //        let _ = solana.auth.save(source)
 
@@ -150,7 +156,7 @@ class BlockchainSdkExampleViewModel: ObservableObject {
 //        print("Recipient address:", recipient.address)
 
         g.enter()
-        solana.action.sendSOL(to: recipient.address, amount: 1, signer: self) {
+        solana.action.sendSOL(to: "EwTxJNhFCCYEBF1ffCrSkf6x61rT2Z1ZwpxQPwkSF1TY", amount: 1, signer: self) {
             print("Sent SOL", $0)
             g.leave()
         }
