@@ -11,14 +11,17 @@ import TangemSdk
 import Solana
 
 class BlockchainSdkExampleViewModel: ObservableObject {
+    // 24MTxbKYGJHVxv2zkuZiyJisT1HStucHKBFFu63k6tAG
     private var account_24MT_6tAG: Account? {
         nil
     }
 
+    // EwTxJNhFCCYEBF1ffCrSkf6x61rT2Z1ZwpxQPwkSF1TY
     private var account_EwTx_F1TY: Account? {
         nil
     }
 
+    // 9C6ziEgqV1WT4pAqAxYDw7n3W48DF7JGRheaZMxqzYgM
     private var account_9C6z_zYgM: Account? {
         nil
     }
