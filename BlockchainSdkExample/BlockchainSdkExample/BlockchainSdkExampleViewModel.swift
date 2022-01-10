@@ -82,10 +82,32 @@ class BlockchainSdkExampleViewModel: ObservableObject {
         }
     }
     
-    public func tokenTest() {
-        let mintAddress = "6AUM4fSvCAxCugrbJPFxTqYFp9r3axYx973yoSyzDYVH"
-        solana.action.getTokenWallets(account: "24MTxbKYGJHVxv2zkuZiyJisT1HStucHKBFFu63k6tAG") {
-            print("Finished token test:", $0)
+    public func sendToken() {
+        let tokenMintAddress = "HmSghNPg6KCk711YJA92aPejt8auyFkvmaED6jbHfUs4"
+        let senderAddress = publicKey.base58EncodedString
+        let receiverTokenAddress = "uPZjCNGFhT2jdcRzJ2szL7mohAz6N19sGeZ7Le42kh1"
+        
+        solana.action.getTokenWallets(account: senderAddress) { tokenWallets in
+            switch tokenWallets {
+            case .failure(let error):
+                print("ERROR", error)
+            case .success(let wallets):
+                guard let wallet = wallets.first(where: {
+                    $0.token?.address == tokenMintAddress
+                }) else {
+                    return
+                }
+                
+                self.solana.action.sendSPLTokens(mintAddress: tokenMintAddress, decimals: 9, from: wallet.pubkey, to: receiverTokenAddress, amount: 1, signer: self) {
+                    print($0)
+                }
+            }
+        }
+    }
+        
+    public func getTokenWallets() {
+        solana.action.getTokenWallets(account: publicKey.base58EncodedString) {
+            print("Finished token wallets:", $0)
         }
     }
 }
