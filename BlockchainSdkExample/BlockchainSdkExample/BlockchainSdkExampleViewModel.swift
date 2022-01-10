@@ -28,8 +28,8 @@ class BlockchainSdkExampleViewModel: ObservableObject {
     private let solana: Solana
 
     let sdk = TangemSdk()
-    var card: Card?
-
+    @Published var card: Card?
+    
     func scan() {
         sdk.scanCard(initialMessage: nil) {
             switch $0 {
@@ -82,7 +82,10 @@ class BlockchainSdkExampleViewModel: ObservableObject {
         let bytes = [UInt8](data)
         return Base58.encode(bytes)
     }
-
+    
+    public func tokenTest() {
+    }
+    
     public func test(reverse: Bool = false) {
 
         print("")
