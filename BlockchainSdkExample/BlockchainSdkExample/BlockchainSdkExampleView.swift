@@ -19,9 +19,9 @@ struct BlockchainSdkExampleView: View {
             }
 
             Button {
-                model.test()
+                model.sendSol()
             } label: {
-                Text("Test")
+                Text("Send SOL")
             }
             .disabled(model.card == nil)
             
