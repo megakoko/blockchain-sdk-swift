@@ -217,16 +217,16 @@ extension BlockchainSdkExampleViewModel: Signer {
 //        .init(string: "ec7710e961a3b5477ba559baca93c1d7")!
     }
     
-    func sign(message: Data, completion: @escaping (Data?) -> Void) {
+    func sign(message: Data, completion: @escaping (Result<Data, Error>) -> Void) {
         let card = card!
         let wallet = edWallet!
         sdk.sign(hash: message, walletPublicKey: wallet.publicKey, cardId: card.cardId) {
             print($0)
             switch $0 {
             case .failure(let error):
-                break
+                completion(.failure(error))
             case .success(let response):
-                completion(response.signature)
+                completion(.success(response.signature))
             }
         }
     }
