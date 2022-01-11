@@ -104,6 +104,14 @@ class BlockchainSdkExampleViewModel: ObservableObject {
             }
         }
     }
+    
+    public func createTokenWallet() {
+        let tokenMintAddress = "HmSghNPg6KCk711YJA92aPejt8auyFkvmaED6jbHfUs4"
+        
+        solana.action.createTokenAccount(mintAddress: tokenMintAddress, signer: self) {
+            print("Finished create token account:", $0)
+        }
+    }
         
     public func getTokenWallets() {
         solana.action.getTokenWallets(account: publicKey.base58EncodedString) {

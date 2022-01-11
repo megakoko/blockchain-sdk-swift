@@ -37,6 +37,12 @@ struct BlockchainSdkExampleView: View {
             } label: {
                 Text("Get token wallets")
             }
+            
+            Button {
+                model.createTokenWallet()
+            } label: {
+                Text("Create token wallet")
+            }
             .disabled(model.card == nil)
         }
     }
